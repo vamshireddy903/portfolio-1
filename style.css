@@ -1,0 +1,125 @@
+/* ===== Base ===== */
+:root{
+  --bg:#f8fbff;
+  --text:#333;
+  --muted:#555;
+  --card:#ffffff;
+  --primary:#222;
+  --primary-2:#444;
+  --accent:#ffcc00;
+  --accent-2:#007acc;
+  --soft:#f1f5ff;
+  --soft-2:#f9fcff;
+  --border:#e6e9f2;
+  --shadow:0 3px 10px rgba(0,0,0,.08);
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+}
+
+/* ===== Header / Nav ===== */
+header{
+  background: linear-gradient(90deg,var(--primary),var(--primary-2));
+  color:#fff;
+  padding: 1rem 2rem;
+  display:flex;justify-content:space-between;align-items:center;
+  position: sticky; top: 0; z-index: 10;
+}
+header h1{font-size:1.25rem;letter-spacing:.3px}
+header nav a{
+  color:#fff;text-decoration:none;font-weight:700;margin-left:1rem;opacity:.9
+}
+header nav a:hover{opacity:1;color:var(--accent)}
+
+/* ===== Sections ===== */
+section{padding:3.2rem 1.5rem}
+.hero{
+  text-align:center;
+  padding:4rem 1.5rem;
+  background: linear-gradient(135deg,#eaf6ff,#ffffff 50%, #eef9fb);
+}
+.hero h2{font-size:2.2rem;margin-bottom:1rem;color:#111}
+.hero p{
+  max-width: 860px; margin:0 auto 1.5rem; color:var(--muted); font-size:1.05rem
+}
+
+/* Buttons */
+.buttons{margin-top:.5rem}
+.btn{
+  display:inline-block; background:var(--primary); color:#fff;
+  padding:.65rem 1.1rem; border-radius:8px; text-decoration:none; margin:.3rem;
+  box-shadow: var(--shadow); transition:transform .15s ease, background .2s ease;
+}
+.btn:hover{transform:translateY(-1px); background:var(--accent); color:#111}
+.btn.outline{
+  background:transparent; color:var(--primary);
+  border:2px solid var(--primary);
+}
+.btn.outline:hover{background:#fff; color:#111; border-color:var(--accent)}
+
+/* ===== Skills (Table) ===== */
+#skills{background:var(--soft); text-align:center}
+#skills h3{font-size:1.6rem;margin-bottom:1.2rem;color:#111}
+.table-container{display:flex;justify-content:center}
+table{
+  width: min(920px,95%);
+  border-collapse: collapse;
+  background: var(--card);
+  box-shadow: var(--shadow);
+  border:1px solid var(--border);
+}
+td{
+  padding:.9rem 1rem; border:1px solid var(--border); text-align:left
+}
+tr:nth-child(even) td{background:#fbfdff}
+
+/* ===== Projects ===== */
+#projects{background:#fff}
+#projects h3, #experience h3, #education h3, #contact h3{
+  text-align:center; font-size:1.6rem; margin-bottom:1.6rem; color:#111
+}
+.project-card{
+  background: var(--soft-2);
+  border-left:5px solid var(--accent-2);
+  padding:1.3rem 1.2rem; margin:0 auto 1.1rem; border-radius:10px;
+  box-shadow: var(--shadow); max-width: 960px;
+}
+.project-card h4{margin-bottom:.35rem; color:var(--accent-2)}
+.project-card .tools{margin:.2rem 0 .6rem; color:#0c3550; font-weight:700}
+.project-card ul{padding-left:1.2rem}
+.project-card li{margin:.45rem 0}
+
+/* ===== Experience ===== */
+#experience .project-card h4{color:#222}
+#experience .project-card p{color:var(--muted); margin-bottom:.4rem}
+
+/* ===== Education & Certifications ===== */
+#education .project-card h4{margin:.2rem 0 .3rem}
+#education .project-card ul{padding-left:1.2rem}
+#education .project-card li{margin:.35rem 0}
+
+/* ===== Contact ===== */
+#contact{background:var(--soft); text-align:center}
+.socials a{
+  display:inline-block; margin:.2rem .7rem; font-weight:700; text-decoration:none;
+  color:var(--primary); border-bottom:2px solid transparent; padding-bottom:2px
+}
+.socials a:hover{border-color:var(--accent)}
+
+/* ===== Footer ===== */
+footer{
+  background: var(--primary); color:#bfc4cf; text-align:center; padding:1rem
+}
+
+/* ===== Responsive ===== */
+@media (max-width:720px){
+  .hero h2{font-size:1.85rem}
+  header nav a{margin-left:.7rem}
+  td{padding:.75rem .8rem}
+}
